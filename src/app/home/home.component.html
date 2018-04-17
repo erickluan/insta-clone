@@ -1,0 +1,15 @@
+<nav class="navbar fixed-top navbar-light bg-white">
+    <div class="container">
+        <div class="logo" routerLink="/home"></div>
+        <div>
+            <div class="add-post" data-toggle="modal" data-target="#exampleModal"></div>
+            <a href="#" (click)="logout()" style="margin-left: 25px">Sair</a>
+        </div>
+    </div>
+</nav>
+
+<br /><br /><br />
+<div class="container">
+    <app-posts #posts></app-posts>
+    <app-new-post (updateTimeline)="updateTimeline()"></app-new-post>
+</div>

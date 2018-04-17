@@ -1,0 +1,20 @@
+<div class="row" *ngFor="let post of posts">
+    <div class="col d-flex justify-content-center">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text"><strong> {{ post.username }} </strong></p>
+            </div>
+
+            <img class="card-img" [src]="post.urlImage || ''" />
+
+            <div class="card-body">
+                <p class="card-text">
+                    <strong> {{ post.username }} </strong> {{ post.title }}
+                </p>
+
+                <hr />
+                <input type="text" class="form-control comentario" placeholder="Adicione um comentário..." />
+            </div>
+        </div>
+    </div>
+</div>
